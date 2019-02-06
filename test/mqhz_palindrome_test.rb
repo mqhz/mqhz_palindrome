@@ -6,6 +6,15 @@ class MqhzPalindromeTest < Minitest::Test
   end
 
   def test_it_does_something_useful
-    assert false
+    refute "apple".palindrome?
   end
+
+  def test_mixed_case_palindrome
+    assert "RaceCaR".palindrome?
+  end
+
+  def test_palindrome_with_punctuation
+    assert "Madam, I'm Adam".palindrome?
+  end
+
 end
